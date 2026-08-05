@@ -51,6 +51,11 @@ export const metadata: Metadata = {
       "Building digital solutions that make businesses smarter — web systems, software, and IT consulting from Rwanda.",
     images: ["/og-image.png"],
   },
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
   robots: { index: true, follow: true },
   alternates: { canonical: SITE_URL },
 };

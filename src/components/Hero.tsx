@@ -42,6 +42,10 @@ export default function Hero() {
                     I build fast, scalable websites, software systems, and digital solutions that help businesses grow through modern technology.
                   </motion.p>
 
+                  <div className="lg:hidden">
+                    <ProfileCard />
+                  </div>
+
                   <motion.ul initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.22 }} className="flex flex-wrap gap-2 mt-3">
                     {[
                       "React",
