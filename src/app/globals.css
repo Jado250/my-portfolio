@@ -216,11 +216,11 @@ body {
 
 /* avatar gradient border */
 .avatar-gradient-border {
-  background: linear-gradient(135deg,#5b8dbe 0%, #8f5bd3 50%, #5b8dbe 100%);
+  background: linear-gradient(135deg, #d4a24c 0%, #e8c483 50%, #d4a24c 100%);
   filter: blur(8px);
   opacity: 0.85;
   transform: scale(1.08);
-  box-shadow: 0 12px 30px rgba(91,141,190,0.12);
+  box-shadow: 0 12px 30px rgba(212,162,76,0.18);
 }
 
 /* avatar image positioning to center the face inside the circular frame */

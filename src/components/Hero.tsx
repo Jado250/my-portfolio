@@ -34,7 +34,7 @@ export default function Hero() {
 
                   <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, delay: 0.12 }}>
                     <p className="text-lg text-text-muted">👋 Hi, I'm</p>
-                    <h1 className="font-display text-[clamp(2.6rem,6vw,4rem)] leading-[1.02] text-text">Jean de Dieu KWIZERA</h1>
+                    <h1 className="font-display text-[clamp(2.2rem,5.5vw,3.6rem)] leading-[1.02] text-text">Jean de Dieu KWIZERA</h1>
                     <p className="text-base text-text-muted font-medium">Full-Stack Developer & IT Solutions Engineer</p>
                   </motion.div>
 
