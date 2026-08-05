@@ -26,7 +26,7 @@ export default function Footer() {
             onClick={() => window.location.href = "mailto:kjado250@gmail.com"}
             title="Email kjado250@gmail.com"
             aria-label="Email"
-            className="text-text-muted hover:text-gold transition-colors cursor-pointer"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-bg-panel text-text-muted transition duration-200 hover:border-gold/40 hover:bg-gold hover:text-ink-0"
           >
             <Mail size={16} />
           </button>
@@ -36,7 +36,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             data-cursor-hover
             aria-label="GitHub"
-            className="text-text-muted hover:text-gold transition-colors"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-bg-panel text-text-muted transition duration-200 hover:border-gold/40 hover:bg-gold hover:text-ink-0"
           >
             <GithubIcon size={16} />
           </a>
@@ -46,7 +46,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             data-cursor-hover
             aria-label="WhatsApp"
-            className="text-[#25D366] hover:text-[#128C7E] transition-colors"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-bg-panel text-text-muted transition duration-200 hover:border-gold/40 hover:bg-gold hover:text-ink-0"
           >
             <WhatsappIcon size={16} />
           </a>

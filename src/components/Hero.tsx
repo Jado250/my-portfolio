@@ -7,7 +7,7 @@ import ProfileCard from "./ProfileCard";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-[100svh] flex items-center overflow-hidden">
+    <section id="home" className="relative min-h-[85svh] lg:min-h-[90svh] flex items-center overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute left-[-6rem] top-10 h-[28rem] w-[28rem] rounded-full bg-gold/15 blur-3xl" />
         <div className="absolute right-[-5rem] top-[8rem] h-[24rem] w-[24rem] rounded-full bg-signal/15 blur-3xl" />
@@ -15,10 +15,10 @@ export default function Hero() {
         <div className="absolute inset-0 hero-background" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl w-full px-5 sm:px-8 py-6">
-        <div className="min-h-[90svh] flex items-center">
+      <div className="relative mx-auto max-w-7xl w-full px-5 sm:px-8 py-5">
+        <div className="min-h-[72svh] lg:min-h-[80svh] flex items-center">
           <div className="w-full">
-            <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,420px)] items-center">
+            <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,420px)] items-center">
               {/* Left: Intro */}
               <div className="order-last lg:order-first z-10">
                 <div className="space-y-6 max-w-3xl">
@@ -60,10 +60,9 @@ export default function Hero() {
                     ))}
                   </motion.ul>
 
-                  <motion.div initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.26 }} className="flex flex-wrap gap-3 items-center mt-4">
-                    <a href="#projects" onClick={(e) => { e.preventDefault(); document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" }); }} className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-medium text-ink-0 shadow-sm transition-transform duration-200 hover:-translate-y-1">View My Work</a>
+                  <motion.div initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.26 }} className="flex flex-wrap gap-2 items-center mt-4">
                     <a href="/Jean-de-Dieu-KWIZERA-CV.pdf" download className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-3 text-sm font-medium text-text hover:border-gold/60 hover:text-gold transition"> <Download size={14} /> Download CV</a>
-                    <a href="#contact" className="ml-2 text-sm text-text-muted underline-offset-2 hover:text-text">Let's Talk →</a>
+                    <a href="#contact" className="text-sm text-text-muted underline-offset-2 hover:text-text">Let's Talk →</a>
                   </motion.div>
                 </div>
               </div>
@@ -77,23 +76,6 @@ export default function Hero() {
         </div>
       </div>
 
-      <motion.button
-        type="button"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.1, duration: 0.6 }}
-        onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-3 text-text-faint transition hover:bg-white/10"
-        aria-label="Scroll to projects"
-      >
-        <span className="font-mono text-[10px] tracking-[0.2em] uppercase">View projects</span>
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
-        >
-          <ArrowDown size={14} />
-        </motion.div>
-      </motion.button>
     </section>
   );
 }
