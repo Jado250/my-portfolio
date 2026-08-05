@@ -7,7 +7,7 @@ import ProfileCard from "./ProfileCard";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-[85svh] lg:min-h-[90svh] flex items-center overflow-hidden">
+    <section id="home" className="relative min-h-[70svh] sm:min-h-[74svh] md:min-h-[78svh] lg:min-h-[84svh] xl:min-h-[88svh] flex items-center overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute left-[-6rem] top-10 h-[28rem] w-[28rem] rounded-full bg-gold/15 blur-3xl" />
         <div className="absolute right-[-5rem] top-[8rem] h-[24rem] w-[24rem] rounded-full bg-signal/15 blur-3xl" />
@@ -15,13 +15,13 @@ export default function Hero() {
         <div className="absolute inset-0 hero-background" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl w-full px-5 sm:px-8 py-5">
-        <div className="min-h-[72svh] lg:min-h-[80svh] flex items-center">
+      <div className="relative mx-auto max-w-7xl w-full px-4 sm:px-6 py-4 sm:py-6">
+        <div className="flex items-center">
           <div className="w-full">
-            <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,420px)] items-center">
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,360px)] items-center">
               {/* Left: Intro */}
               <div className="order-last lg:order-first z-10">
-                <div className="space-y-6 max-w-3xl">
+                <div className="space-y-6 max-w-xl sm:max-w-2xl">
                   <motion.div
                     initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -34,15 +34,15 @@ export default function Hero() {
 
                   <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, delay: 0.12 }}>
                     <p className="text-lg text-text-muted">👋 Hi, I'm</p>
-                    <h1 className="font-display text-[clamp(2.2rem,5.5vw,3.6rem)] leading-[1.02] text-text">Jean de Dieu KWIZERA</h1>
-                    <p className="text-base text-text-muted font-medium">Full-Stack Developer & IT Solutions Engineer</p>
+                    <h1 className="font-display text-[clamp(1.9rem,5vw,3rem)] leading-[1.02] text-text">Jean de Dieu KWIZERA</h1>
+                    <p className="text-sm sm:text-base text-text-muted font-medium">Full-Stack Developer & IT Solutions Engineer</p>
                   </motion.div>
 
-                  <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, delay: 0.18 }} className="mt-2 text-sm sm:text-base text-text-muted max-w-xl">
+                  <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, delay: 0.18 }} className="mt-2 text-sm sm:text-base text-text-muted max-w-lg sm:max-w-xl">
                     I build fast, scalable websites, software systems, and digital solutions that help businesses grow through modern technology.
                   </motion.p>
 
-                  <div className="lg:hidden">
+                  <div className="lg:hidden pt-6">
                     <ProfileCard />
                   </div>
 
