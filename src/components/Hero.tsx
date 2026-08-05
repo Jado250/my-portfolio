@@ -16,12 +16,12 @@ export default function Hero() {
       </div>
 
       <div className="relative mx-auto max-w-7xl w-full px-5 sm:px-8 py-6">
-        <div className="h-[90svh] flex items-center">
+        <div className="min-h-[90svh] flex items-center">
           <div className="w-full">
-            <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_420px] items-center">
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,420px)] items-center">
               {/* Left: Intro */}
-              <div className="order-last lg:order-first">
-                <div className="space-y-6 max-w-2xl">
+              <div className="order-last lg:order-first z-10">
+                <div className="space-y-6 max-w-3xl">
                   <motion.div
                     initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -77,22 +77,23 @@ export default function Hero() {
         </div>
       </div>
 
-      <motion.div
+      <motion.button
+        type="button"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.1, duration: 0.6 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-text-faint"
+        onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-3 text-text-faint transition hover:bg-white/10"
+        aria-label="Scroll to projects"
       >
-        <span className="font-mono text-[10px] tracking-[0.2em] uppercase">
-          Scroll
-        </span>
+        <span className="font-mono text-[10px] tracking-[0.2em] uppercase">View projects</span>
         <motion.div
           animate={{ y: [0, 6, 0] }}
           transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
         >
           <ArrowDown size={14} />
         </motion.div>
-      </motion.div>
+      </motion.button>
     </section>
   );
 }
