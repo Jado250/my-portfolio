@@ -8,7 +8,7 @@ import { experience } from "@/data/experience";
 import { cn } from "@/lib/utils";
 
 export default function Experience() {
-  const [openId, setOpenId] = useState<string>(experience[0]?.id ?? "");
+  const [openId, setOpenId] = useState<string>("");
 
   return (
     <section id="experience" className="relative py-24 sm:py-32">
