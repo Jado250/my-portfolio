@@ -64,7 +64,7 @@ export default function Navbar() {
       )}
     >
       <nav
-        className="mx-auto max-w-7xl px-5 sm:px-8 h-16 flex items-center justify-between"
+        className="mx-auto max-w-7xl px-4 sm:px-8 h-16 flex items-center justify-between gap-3"
         aria-label="Primary"
       >
         <a
@@ -73,7 +73,7 @@ export default function Navbar() {
             e.preventDefault();
             handleNav("home");
           }}
-          className="font-mono text-sm tracking-wide flex items-center gap-2"
+          className="font-mono text-sm tracking-wide flex items-center gap-2 min-w-0 shrink-0"
           data-cursor-hover
         >
           <span className="node-dot" />
@@ -107,7 +107,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 shrink-0">
           <button
             onClick={toggleTheme}
             data-cursor-hover
