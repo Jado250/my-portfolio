@@ -61,7 +61,7 @@ export default function Hero() {
                   </motion.ul>
 
                   <motion.div initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.26 }} className="flex flex-wrap gap-2 items-center mt-4">
-                    <a href="/Jean-de-Dieu-KWIZERA-CV.pdf" download className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-3 text-sm font-medium text-text hover:border-gold/60 hover:text-gold transition"> <Download size={14} /> Download CV</a>
+                    <a href="/Jean-de-Dieu-KWIZERA-CV.pdf" download className="inline-flex items-center gap-2 rounded-full border border-border bg-bg-panel px-5 py-3 text-sm font-medium text-text hover:border-gold/60 hover:bg-bg-panel-2 hover:text-gold transition-colors"> <Download size={14} /> Download CV</a>
                     <a href="#contact" className="text-sm text-text-muted underline-offset-2 hover:text-text">Let's Talk →</a>
                   </motion.div>
                 </div>

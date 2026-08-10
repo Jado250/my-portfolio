@@ -12,7 +12,6 @@ import "@fontsource/jetbrains-mono/500.css";
 import "./globals.css";
 import ThemeProvider from "@/components/ThemeProvider";
 import BackToTop from "@/components/BackToTop";
-import Loader from "@/components/Loader";
 
 const SITE_URL = "https://jeandedieukwizera.dev";
 
@@ -102,7 +101,6 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <ThemeProvider>
-          <Loader />
           {children}
           <BackToTop />
         </ThemeProvider>
