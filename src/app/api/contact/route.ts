@@ -48,7 +48,8 @@ export async function POST(req: Request) {
 
     const html = `
       <h2>New contact form message</h2>
-      <p><strong>From:</strong> ${name} &lt;${email}&gt;</p>
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
       <p><strong>Subject:</strong> ${subject}</p>
       <hr />
       <div>${message.replace(/\n/g, "<br />")}</div>
@@ -57,9 +58,29 @@ export async function POST(req: Request) {
     await transporter.sendMail({
       from: `${name} <${email}>`,
       to: toAddress,
-      subject: subject || "New contact form message",
-      text: message,
+      subject: `Contact form: ${subject || "No subject"}`,
+      text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\n\n${message}`,
       html,
+    });
+
+    const confirmationHtml = `
+      <h2>Thanks for reaching out!</h2>
+      <p>Hi ${name},</p>
+      <p>Thanks for your message. I&apos;ve received your contact request and will reply as soon as possible.</p>
+      <p><strong>Your submission details:</strong></p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Subject:</strong> ${subject}</p>
+      <hr />
+      <div>${message.replace(/\n/g, "<br />")}</div>
+      <p>— Jean de Dieu KWIZERA</p>
+    `;
+
+    await transporter.sendMail({
+      from: `${toAddress}`,
+      to: email,
+      subject: `Copy of your message to ${toAddress}`,
+      text: `Hi ${name},\n\nThanks for your message. I have received your contact request and will reply as soon as possible.\n\nYour submission details:\nEmail: ${email}\nSubject: ${subject}\n\n${message}\n\n— Jean de Dieu KWIZERA`,
+      html: confirmationHtml,
     });
 
     return NextResponse.json({ ok: true });

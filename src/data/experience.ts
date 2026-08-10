@@ -11,7 +11,7 @@ export interface ExperienceEntry {
 export const experience: ExperienceEntry[] = [
   {
     id: "iprc",
-    period: "2023 — Present",
+    period: "2025 — Present",
     title: "Information Technology Student, A1",
     org: "IPRC",
     type: "education",
