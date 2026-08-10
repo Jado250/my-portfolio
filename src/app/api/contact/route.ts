@@ -56,7 +56,8 @@ export async function POST(req: Request) {
     `;
 
     await transporter.sendMail({
-      from: `${name} <${email}>`,
+      from: toAddress,
+      replyTo: `${name} <${email}>`,
       to: toAddress,
       subject: `Contact form: ${subject || "No subject"}`,
       text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\n\n${message}`,
@@ -68,6 +69,7 @@ export async function POST(req: Request) {
       <p>Hi ${name},</p>
       <p>Thanks for your message. I&apos;ve received your contact request and will reply as soon as possible.</p>
       <p><strong>Your submission details:</strong></p>
+      <p><strong>Name:</strong> ${name}</p>
       <p><strong>Email:</strong> ${email}</p>
       <p><strong>Subject:</strong> ${subject}</p>
       <hr />
@@ -76,10 +78,10 @@ export async function POST(req: Request) {
     `;
 
     await transporter.sendMail({
-      from: `${toAddress}`,
+      from: toAddress,
       to: email,
       subject: `Copy of your message to ${toAddress}`,
-      text: `Hi ${name},\n\nThanks for your message. I have received your contact request and will reply as soon as possible.\n\nYour submission details:\nEmail: ${email}\nSubject: ${subject}\n\n${message}\n\n— Jean de Dieu KWIZERA`,
+      text: `Hi ${name},\n\nThanks for your message. I have received your contact request and will reply as soon as possible.\n\nYour submission details:\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\n\n${message}\n\n— Jean de Dieu KWIZERA`,
       html: confirmationHtml,
     });
 

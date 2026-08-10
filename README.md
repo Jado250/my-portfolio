@@ -30,10 +30,12 @@ npm run dev
 
 Open http://localhost:3000.
 
-## Contact form (EmailJS)
+## Contact form (EmailJS / SMTP)
 
 The form works out of the box in **demo mode** — it validates input and simulates a
-successful send, but doesn't deliver email until you connect EmailJS:
+successful send, but doesn't deliver email until you connect EmailJS or SMTP.
+
+### Option 1: EmailJS
 
 1. Create a free account at https://www.emailjs.com
 2. Add an email service and a template with variables: `from_name`, `from_email`,
@@ -41,6 +43,21 @@ successful send, but doesn't deliver email until you connect EmailJS:
 3. Copy `.env.example` to `.env.local` and fill in your Service ID, Template ID,
    and Public Key
 4. Restart the dev server
+
+### Option 2: SMTP (server-side delivery)
+
+1. Add a valid SMTP service account (Gmail SMTP, SendGrid, Mailgun, etc.)
+2. Copy `.env.example` to `.env.local` and fill in:
+   - `CONTACT_EMAIL`
+   - `SMTP_HOST`
+   - `SMTP_PORT`
+   - `SMTP_USER`
+   - `SMTP_PASS`
+   - `SMTP_SECURE` (`true` for SSL/TLS, `false` for STARTTLS)
+3. Restart the dev server
+
+If SMTP is configured, the app sends the contact form email through your SMTP server,
+and also sends a confirmation copy back to the submitter.
 
 ## Customizing
 
