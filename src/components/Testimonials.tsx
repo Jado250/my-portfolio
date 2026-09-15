@@ -29,7 +29,7 @@ export default function Testimonials() {
         >
           <Quote className="text-gold/40" size={36} strokeWidth={1.5} />
           <blockquote className="mt-6 font-display text-xl sm:text-2xl leading-snug text-balance text-text">
-            Jean de Dieu approached our website with real professionalism —
+            Jean de Dieu approached our website with real professionalism.
             technically sound, creative in how he solved problems, and
             reliable through every stage of the project. He delivered a
             high-quality result we were genuinely proud to launch, and we

@@ -6,10 +6,16 @@ export interface Service {
 
 export const services: Service[] = [
   {
+    id: "virtual-assistance",
+    title: "Virtual Assistance",
+    description:
+      "Reliable remote support for email and calendar management, research, lead generation, data entry, documents, customer communication, and administrative workflows.",
+  },
+  {
     id: "web-development",
     title: "Web Development",
     description:
-      "Responsive, fast-loading websites and web apps built with modern frameworks — from marketing sites to full client portals.",
+      "Responsive, fast-loading websites and web apps built with modern frameworks, from marketing sites to full client portals.",
   },
   {
     id: "software-development",
@@ -28,11 +34,5 @@ export const services: Service[] = [
     title: "Digital Marketing",
     description:
       "Campaign setup, content direction, and online growth support to help businesses reach the right customers with measurable impact.",
-  },
-  {
-    id: "business-tech-consulting",
-    title: "Business Technology Consulting",
-    description:
-      "Practical recommendations on which tools and systems actually fit a business's size, budget, and growth stage.",
   },
 ];

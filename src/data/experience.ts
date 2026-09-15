@@ -11,7 +11,7 @@ export interface ExperienceEntry {
 export const experience: ExperienceEntry[] = [
   {
     id: "iprc",
-    period: "2025 — Present",
+    period: "2025 to Present",
     title: "Information Technology Student, A1",
     org: "IPRC",
     type: "education",
@@ -26,7 +26,7 @@ export const experience: ExperienceEntry[] = [
     org: "Independent Project",
     type: "work",
     description:
-      "Designed and built a full ordering flow — customer menu, kitchen queue, and admin dashboard — on React, Node.js, Express.js, and MySQL.",
+      "Designed and built a full ordering flow with a customer menu, kitchen queue, and admin dashboard using React, Node.js, Express.js, and MySQL.",
     tags: ["Full-Stack Development", "REST API Development", "UI/UX Design"],
   },
   {

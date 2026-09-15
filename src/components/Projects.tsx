@@ -92,7 +92,7 @@ export default function Projects() {
                     {project.description}
                   </p>
                   <p className="text-xs text-text-faint leading-relaxed mb-6">
-                    <span className="text-gold font-mono">Problem — </span>
+                    <span className="text-gold font-mono">Problem: </span>
                     {project.problem}
                   </p>
 

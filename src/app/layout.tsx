@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-// Self-hosted fonts (via fontsource) instead of next/font/google —
+// Self-hosted fonts (via fontsource), instead of next/font/google.
 // no runtime dependency on fonts.googleapis.com, better privacy & reliability.
 import "@fontsource/space-grotesk/500.css";
 import "@fontsource/space-grotesk/600.css";
@@ -18,8 +18,8 @@ const SITE_URL = "https://jeandedieukwizera.dev";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Jean de Dieu KWIZERA — Full-Stack Developer & IT Consultant, Rwanda",
-    template: "%s — Jean de Dieu KWIZERA",
+    default: "Jean de Dieu KWIZERA, Full-Stack Developer & IT Consultant, Rwanda",
+    template: "%s | Jean de Dieu KWIZERA",
   },
   description:
     "Jean de Dieu KWIZERA is an Information Technology student and full-stack developer in Rwanda, building web systems, business software, and digital infrastructure for real companies.",
@@ -37,17 +37,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: SITE_URL,
-    title: "Jean de Dieu KWIZERA — Full-Stack Developer & IT Consultant",
+    title: "Jean de Dieu KWIZERA, Full-Stack Developer & IT Consultant",
     description:
-      "Building digital solutions that make businesses smarter — web systems, software, and IT consulting from Rwanda.",
+      "Building digital solutions that make businesses smarter: web systems, software, and IT consulting from Rwanda.",
     siteName: "Jean de Dieu KWIZERA",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jean de Dieu KWIZERA — Full-Stack Developer & IT Consultant",
+    title: "Jean de Dieu KWIZERA, Full-Stack Developer & IT Consultant",
     description:
-      "Building digital solutions that make businesses smarter — web systems, software, and IT consulting from Rwanda.",
+      "Building digital solutions that make businesses smarter: web systems, software, and IT consulting from Rwanda.",
     images: ["/og-image.png"],
   },
   icons: {

@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2 font-mono text-xs text-text-faint">
           <span className="node-dot" />
-          Jean de Dieu KWIZERA — © {new Date().getFullYear()}
+          Jean de Dieu KWIZERA | © {new Date().getFullYear()}
         </div>
 
         <div className="flex items-center gap-4">

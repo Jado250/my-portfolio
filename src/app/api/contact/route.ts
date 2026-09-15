@@ -15,7 +15,7 @@ export async function POST(req: Request) {
     if (!smtpHost || !smtpPort || !smtpUser || !smtpPass) {
       // In development, optionally simulate success so the UI still works.
       if (process.env.NODE_ENV !== "production") {
-        console.warn("SMTP not configured — simulating contact send (dev mode).");
+        console.warn("SMTP not configured, simulating contact send (dev mode).");
         return NextResponse.json({ ok: true });
       }
 
@@ -74,14 +74,14 @@ export async function POST(req: Request) {
       <p><strong>Subject:</strong> ${subject}</p>
       <hr />
       <div>${message.replace(/\n/g, "<br />")}</div>
-      <p>— Jean de Dieu KWIZERA</p>
+      <p>Jean de Dieu KWIZERA</p>
     `;
 
     await transporter.sendMail({
       from: toAddress,
       to: email,
       subject: `Copy of your message to ${toAddress}`,
-      text: `Hi ${name},\n\nThanks for your message. I have received your contact request and will reply as soon as possible.\n\nYour submission details:\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\n\n${message}\n\n— Jean de Dieu KWIZERA`,
+      text: `Hi ${name},\n\nThanks for your message. I have received your contact request and will reply as soon as possible.\n\nYour submission details:\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\n\n${message}\n\nJean de Dieu KWIZERA`,
       html: confirmationHtml,
     });
 

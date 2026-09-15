@@ -1,9 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Code2,
   Cpu,
+  ChevronDown,
   Wrench,
   Megaphone,
   Briefcase,
@@ -13,6 +15,8 @@ import AnimatedCounter from "./AnimatedCounter";
 import { services } from "@/data/services";
 
 const ICONS: Record<string, React.ReactNode> = {
+  "virtual-assistance": <Briefcase size={20} />,
+  "digital-operations": <Cpu size={20} />,
   "web-development": <Code2 size={20} />,
   "software-development": <Cpu size={20} />,
   "it-support": <Wrench size={20} />,
@@ -28,6 +32,8 @@ const STATS = [
 ];
 
 export default function Services() {
+  const [isVirtualAssistantOpen, setIsVirtualAssistantOpen] = useState(false);
+
   return (
     <section id="services" className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
@@ -53,15 +59,61 @@ export default function Services() {
               transition={{ duration: 0.5, delay: i * 0.07 }}
               className="lg:col-span-1 rounded-2xl border border-border bg-bg-panel p-6 hover:border-gold/40 transition-colors"
             >
-              <div className="h-10 w-10 rounded-full bg-bg-panel-2 flex items-center justify-center text-gold mb-5">
-                {ICONS[service.id]}
-              </div>
-              <h3 className="font-display font-semibold text-base mb-2">
-                {service.title}
-              </h3>
-              <p className="text-sm text-text-muted leading-relaxed">
-                {service.description}
-              </p>
+              {service.id === "virtual-assistance" ? (
+                <button
+                  type="button"
+                  aria-expanded={isVirtualAssistantOpen}
+                  onClick={() => setIsVirtualAssistantOpen((open) => !open)}
+                  className="w-full text-left"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="h-10 w-10 rounded-full bg-bg-panel-2 flex items-center justify-center text-gold mb-5">
+                      {ICONS[service.id]}
+                    </div>
+                    <ChevronDown
+                      size={17}
+                      className={`mt-2 text-text-muted transition-transform ${isVirtualAssistantOpen ? "rotate-180" : ""}`}
+                    />
+                  </div>
+                  <h3 className="font-display font-semibold text-base mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-sm text-text-muted leading-relaxed">
+                    {service.description}
+                  </p>
+                  {isVirtualAssistantOpen && (
+                    <ul className="mt-4 space-y-2 border-t border-border pt-4 text-xs text-text-muted">
+                      {[
+                        "Email & Calendar Management",
+                        "Online Research & Lead Generation",
+                        "Data Entry, Excel & Google Sheets",
+                        "Customer Support & CRM",
+                        "Document & File Management",
+                        "AI Tools & Workflow Automation",
+                        "Travel Arrangements & Booking",
+                        "Administrative Support",
+                      ].map((item) => (
+                        <li key={item} className="flex gap-2">
+                          <span className="text-gold">+</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </button>
+              ) : (
+                <>
+                  <div className="h-10 w-10 rounded-full bg-bg-panel-2 flex items-center justify-center text-gold mb-5">
+                    {ICONS[service.id]}
+                  </div>
+                  <h3 className="font-display font-semibold text-base mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-sm text-text-muted leading-relaxed">
+                    {service.description}
+                  </p>
+                </>
+              )}
             </motion.div>
           ))}
         </div>

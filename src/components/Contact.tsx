@@ -228,7 +228,7 @@ export default function Contact() {
             <div aria-live="polite" className="mt-4">
               {status === "success" && (
                 <p className="flex items-center gap-2 text-sm text-green-500">
-                  <CheckCircle2 size={16} /> Message sent — thank you! I&apos;ll
+                  <CheckCircle2 size={16} /> Message sent, thank you! I&apos;ll
                   get back to you soon.
                 </p>
               )}

@@ -36,10 +36,11 @@ export default function Hero() {
                     <p className="text-lg text-text-muted">👋 Hi, I'm</p>
                     <h1 className="font-display text-[clamp(1.9rem,5vw,3rem)] leading-[1.02] text-text">Jean de Dieu KWIZERA</h1>
                     <p className="text-sm sm:text-base text-text-muted font-medium">Full-Stack Developer & IT Solutions Engineer</p>
+                    <p className="mt-2 text-sm sm:text-base font-semibold text-gold">Virtual Assistant | IT Support & Digital Operations</p>
                   </motion.div>
 
                   <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, delay: 0.18 }} className="mt-2 text-sm sm:text-base text-text-muted max-w-lg sm:max-w-xl">
-                    I build fast, scalable websites, software systems, and digital solutions that help businesses grow through modern technology.
+                    I build fast, scalable websites and software systems, and I help remote teams stay organized through dependable virtual assistance, IT support, and modern digital operations.
                   </motion.p>
 
                   <div className="lg:hidden pt-6">
@@ -53,6 +54,7 @@ export default function Hero() {
                       "Node.js",
                       "TypeScript",
                       "MySQL",
+                      "Git & GitHub",
                     ].map((t) => (
                       <li key={t} className="tech-badge bg-bg-panel-2 border border-white/8 px-3 py-1 rounded-full text-xs text-text-muted hover:border-gold/40 transition">
                         {t}
